@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins Black';
+    src: url(./fonts/Poppins-Black.ttf);
+}
+
+:root {
+    --bg-color: #212027;
+    --hero-bg-color: linear-gradient(to bottom right, #180006, #000, #12001f);
+    --text-main-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    color: var(--text-main-color);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+}
+
+.c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.c-nav-content, .c-nav-links {
+    width: 80%;
+    justify-content: space-between;
+}
+
+.c-nav-links {
+    width: fit-content;
+    gap: 3rem;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+main {
+    padding-top: 6rem;
+    height: 100vh;
+    background-image: var(--hero-bg-color);
+}
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    justify-content: space-around;
+}
+
+.logo {
+    height: 3rem;
+}
+
+.c-pfp {
+    height: 70%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-image: url(./pfp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.c-hero-content {
+    width: 40%;
+    height: 60%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.c-hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.text-highlight, .hero-title-massola {
+    font-size: 1.3rem;
+    background: linear-gradient(to right, #ff004c, #ff476f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-title-massola {
+    font-family: 'Poppins Black';
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+}
+
+.c-hero-subtitle {
+    margin-top: -10px;
+    color: #bebebe;
+    font-size: 1.5rem;
+    letter-spacing: 0.7rem;
+}
+
+.c-hero-text {
+    font-size: 1.3rem;
+    color: #a7a7a7;
+}
+
+.menu-bar {
+    display: none;
+}
+
+@media only screen and (width < 1000px) {
+    :root {
+        --hero-bg-color: linear-gradient(to bottom, #180006, #000, #12001f);
+    }
+
+    main {
+        height: fit-content;
+        padding-bottom: 5rem;
+    }
+
+    .c-hero-content {
+        width: 85%;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    .c-hero-subtitle {
+        text-align: center;
+    }
+
+    .c-hero-title {
+        text-align: center;
+    }
+
+    .c-hero-text {
+        text-align: center;
+    }
+
+    .c-pfp {
+        width: 50%;
+    }
+
+    .hero {
+        min-height: 100vh;
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (width < 800px) {
+    .menu-bar {
+        display: block;
+        width: 3rem;
+        height: 3px;
+        background-color: #fff;
+    }
+
+    .nav-link {
+        display: none;
+    }
+
+    .c-nav-links {
+        width: 3rem;
+        height: 3rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
