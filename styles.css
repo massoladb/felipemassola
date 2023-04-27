@@ -124,6 +124,18 @@ main {
 
 .menu-bar {
     display: none;
+    width: 3rem;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.c-menu {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media only screen and (width < 1000px) {
@@ -168,11 +180,24 @@ main {
 }
 
 @media only screen and (width < 800px) {
+    .c-pfp {
+        width: 65%;
+    }
+    
+    .c-hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-title-massola {
+        font-size: 3rem;
+    }
+
+    .c-menu {
+        display: flex;
+    }
+
     .menu-bar {
-        display: block;
-        width: 3rem;
-        height: 3px;
-        background-color: #fff;
+        display: inline-block;
     }
 
     .nav-link {
@@ -180,9 +205,6 @@ main {
     }
 
     .c-nav-links {
-        width: 3rem;
-        height: 3rem;
-        flex-direction: column;
-        justify-content: space-between;
+        display: none;
     }
 }
